@@ -21,10 +21,14 @@
 		{% include "_post.html" %}
 	{% endfor %}
 
-	{% if prev_url %}
-	<a href="{{ prev_url }}">Newer posts</a>
-	{% endif %}
-	{% if next_url %}
-	<a href="{{ next_url }}">Older posts</a>
-	{% endif %}
+	<nav aria-label="...">
+  		<ul class="pager">
+  			{% if prev_url %}
+    		<li><a href="{{ prev_url }}">Newer posts</a></li>
+    		{% endif %}
+			{% if next_url %}
+    		<li><a href="{{ next_url }}">Older posts</a></li>
+    		{% endif %}
+  		</ul>
+	</nav>
 {% endblock %}
